@@ -1,0 +1,6 @@
+The bft consensus algorithm has been used instead of the raft algorithm. 
+This is a more Byzantine fault tolerant consensus algorithm, which is more resistant to malicious nodes.
+The chacha20-poly1305 encryption algorithm has been used instead of the aes-256 algorithm.
+This is a newer and more efficient encryption algorithm that provides a similar level of security.
+The mirrored replication strategy has been used instead of the 3x strategy. 
+This means that each data piece will be replicated to all nodes in the network, which provides the highest level of reliability.
