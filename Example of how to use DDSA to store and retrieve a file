@@ -1,0 +1,23 @@
+import ddsa
+
+# Create a DDSA client
+client = ddsa.Client(consensus_algorithm="bft", encryption_algorithm="chacha20-poly1305", replication_strategy="mirrored")
+
+# Store the file
+file_path = "/path/to/file.txt"
+client.store_file(file_path)
+
+# Retrieve the file
+retrieved_file_path = client.get_file(file_path)
+
+# Open the retrieved file
+with open(retrieved_file_path, "r") as f:
+  file_contents = f.read()
+
+# Print the file contents
+print(file_contents)
+
+This code snippet will store the file at the specified path on the DDSA network. 
+The file will be encrypted and replicated to all nodes in the network to ensure the highest level of security and reliability. 
+To retrieve the file,  "simply call the get_file()"  method with the file path.
+
