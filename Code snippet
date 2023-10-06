@@ -1,0 +1,14 @@
+import ddsa
+
+# Create a DDSA client
+client = ddsa.Client(consensus_algorithm="bft", encryption_algorithm="chacha20-poly1305", replication_strategy="mirrored")
+
+# Store some data
+data = "This is some data that I want to store."
+client.store_data(data)
+
+# Retrieve the data
+retrieved_data = client.get_data()
+
+# Print the retrieved data
+print(retrieved_data)
